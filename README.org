@@ -1,0 +1,8 @@
+* Overview
+  My emacs.d config repo
+* Installation
+  1. Remove and backup ~/.emacs file
+  2. Clone this repo
+     #+BEGIN_SRC
+     $ git clone <This repo> ~/.emacs.d
+     #+END_SRC
