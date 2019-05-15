@@ -3,7 +3,7 @@
   :init (global-flycheck-mode))
 (exec-path-from-shell-initialize)
 (require 'expand-region)
-(global-set-key (kbd "C-@") 'er/expand-region)
+;;(global-set-key (kbd "C-@") 'er/expand-region)
 (define-key emacs-lisp-mode-map (kbd "C-c e") 'macrostep-expand)
 (projectile-mode +1)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)

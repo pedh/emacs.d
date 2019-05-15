@@ -13,19 +13,18 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (helm go-mode htmlize markdown-mode zenburn-theme anaconda-mode magit
-	  flycheck use-package exec-path-from-shell company company-anaconda
-	  helm-company expand-region which-key macrostep projectile yasnippet
-	  yasnippet-snippets smartparens avy goto-chg geiser undo-tree anzu
-	  aozora-view))))
+    (helm go-mode htmlize markdown-mode zenburn-theme magit flycheck
+          use-package exec-path-from-shell company helm-company
+          expand-region which-key macrostep projectile yasnippet
+          yasnippet-snippets smartparens avy goto-chg geiser undo-tree
+          anzu aozora-view lsp-mode lsp-ui company-lsp))))
 (unless package-archive-contents
   (package-refresh-contents))
 (package-install-selected-packages)
 (require 'init-helm)
 (require 'init-org)
 (require 'init-company)
-(require 'init-python)
 (require 'init-scheme)
 (require 'init-theme)
+(require 'init-lsp)
 (require 'init-miscellany)
-
