@@ -16,5 +16,8 @@
 (global-set-key [remap query-replace] 'anzu-query-replace)
 (global-set-key [remap query-replace-regexp] 'anzu-query-replace-regexp)
 (global-undo-tree-mode)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook (lambda () (setq-default show-trailing-whitespace t)))
+(global-set-key [f8] 'neotree-toggle)
 
 (provide 'init-miscellany)

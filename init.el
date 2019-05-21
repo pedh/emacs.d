@@ -17,7 +17,8 @@
           use-package exec-path-from-shell company helm-company
           expand-region which-key macrostep projectile yasnippet
           yasnippet-snippets smartparens avy goto-chg geiser undo-tree
-          anzu aozora-view lsp-mode lsp-ui company-lsp))))
+          anzu aozora-view lsp-mode lsp-ui company-lsp rainbow-delimiters
+	  neotree))))
 (unless package-archive-contents
   (package-refresh-contents))
 (package-install-selected-packages)
@@ -27,4 +28,5 @@
 (require 'init-scheme)
 (require 'init-theme)
 (require 'init-lsp)
+(require 'init-magit)
 (require 'init-miscellany)
