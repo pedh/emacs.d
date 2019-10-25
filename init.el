@@ -2,7 +2,8 @@
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
        (proto (if no-ssl "http" "https")))
-  (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t))
+  (add-to-list 'package-archives
+               (cons "melpa" (concat proto "://melpa.org/packages/")) t))
 (package-initialize)
 (add-to-list 'load-path (expand-file-name "packages" user-emacs-directory))
 (custom-set-variables
@@ -18,7 +19,7 @@
           expand-region which-key macrostep projectile yasnippet
           yasnippet-snippets smartparens avy goto-chg geiser undo-tree
           anzu aozora-view lsp-mode lsp-ui company-lsp rainbow-delimiters
-	  neotree))))
+          neotree ggtags))))
 (unless package-archive-contents
   (package-refresh-contents))
 (package-install-selected-packages)
