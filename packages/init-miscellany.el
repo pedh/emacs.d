@@ -25,5 +25,7 @@
 (setq recentf-max-menu-items 25)
 (setq recentf-max-saved-items 25)
 (run-at-time nil (* 5 60) 'recentf-save-list)
+(setq graphviz-dot-indent-width 4)
+(require 'company-graphviz-dot)
 
 (provide 'init-miscellany)
