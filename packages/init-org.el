@@ -2,9 +2,8 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '(;; other Babel languages
-   (dot . t)
-   (plantuml . t)))
-(setq org-plantuml-jar-path
-      (expand-file-name "~/.emacs.d/tools/plantuml.jar"))
+   (dot . t)))
+
+(setq org-confirm-babel-evaluate nil)
 
 (provide 'init-org)
