@@ -27,5 +27,6 @@
 (run-at-time nil (* 5 60) 'recentf-save-list)
 (setq graphviz-dot-indent-width 4)
 (require 'company-graphviz-dot)
+(setq default-directory "~/")
 
 (provide 'init-miscellany)
