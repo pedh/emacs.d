@@ -4,6 +4,7 @@
 
 (use-package magit
   :ensure t
+  :demand
   :bind (("C-x g" . magit-status)
          ("C-x M-g" . magit-dispatch))
   :config

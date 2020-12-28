@@ -7,7 +7,7 @@
   :config
   (load-theme 'zenburn t))
 
-(set-frame-font "monaco-14")
+(setq default-frame-alist '((font . "monaco-14")))
 
 (provide 'init-theme)
 ;;; init-theme.el ends here

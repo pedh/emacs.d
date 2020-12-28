@@ -63,18 +63,21 @@
   :ensure t
   :hook (prog-mode . rainbow-delimiters-mode))
 
-(require 'whitespace)
-(setq whitespace-style '(face empty tabs lines-tail trailing))
-(global-whitespace-mode t)
+(use-package whitespace
+  :hook ((prog-mode org-mode). whitespace-mode)
+  :config
+  (setq whitespace-style '(face empty tabs lines-tail trailing)))
 
 (use-package neotree
   :ensure t
   :bind (([f8] . neotree-toggle)))
 
-(recentf-mode 1)
-(setq recentf-max-menu-items 25)
-(setq recentf-max-saved-items 25)
-(run-at-time nil (* 5 60) 'recentf-save-list)
+(use-package recentf
+  :config
+  (recentf-mode 1)
+  (setq recentf-max-menu-items 25)
+  (setq recentf-max-saved-items 25)
+  (run-at-time nil (* 5 60) 'recentf-save-list))
 
 (use-package graphviz-dot-mode
   :ensure t
