@@ -4,9 +4,9 @@
 
 (use-package magit
   :ensure t
-  :demand
   :bind (("C-x g" . magit-status)
          ("C-x M-g" . magit-dispatch))
+  :defer 2
   :config
   (setq git-commit-summary-max-length 49))
 

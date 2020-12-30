@@ -64,7 +64,9 @@
   :hook (prog-mode . rainbow-delimiters-mode))
 
 (use-package whitespace
-  :hook ((prog-mode org-mode). whitespace-mode)
+  :hook ((prog-mode org-mode) . whitespace-mode)
+  :hook ((go-mode c-mode-common)
+         . (lambda () (whitespace-mode 0) (setq indent-tabs-mode t)))
   :config
   (setq whitespace-style '(face empty tabs lines-tail trailing)))
 
@@ -111,6 +113,7 @@
   :ensure t
   :hook (c-mode-common . ggtags-mode))
 
+(setq-default indent-tabs-mode nil)
 (setq default-directory "~/")
 
 (provide 'init-miscellany)
