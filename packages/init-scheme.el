@@ -1,4 +1,4 @@
-;;; init-scheme --- Initialize scheme
+;;; init-scheme --- Initialize scheme -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 

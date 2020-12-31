@@ -1,4 +1,4 @@
-;;; init-helm --- Initialize helm
+;;; init-helm --- Initialize helm -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 

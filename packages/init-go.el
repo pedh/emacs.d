@@ -1,4 +1,4 @@
-;;; init-go --- Initialize golang
+;;; init-go --- Initialize golang -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 (use-package go-mode

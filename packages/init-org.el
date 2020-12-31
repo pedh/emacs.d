@@ -1,4 +1,4 @@
-;;; init-org --- Initialize orgmode
+;;; init-org --- Initialize orgmode -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 

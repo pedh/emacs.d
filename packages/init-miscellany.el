@@ -1,4 +1,4 @@
-;;; init-miscellany --- Initialize miscellany
+;;; init-miscellany --- Initialize miscellany -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -9,7 +9,14 @@
 (use-package exec-path-from-shell
   :ensure t
   :config
-  (exec-path-from-shell-initialize))
+  (when (eq system-type 'darwin)
+    (exec-path-from-shell-initialize)))
+
+(when (eq system-type 'darwin)
+  (if-let (gls (executable-find "gls"))
+      (setq insert-directory-program gls)))
+
+(setq auth-source-save-behavior nil)
 
 (use-package expand-region
   :ensure t
@@ -94,13 +101,16 @@
          ("C-," . goto-last-change-reverse)))
 
 (use-package htmlize
-  :ensure t)
+  :ensure t
+  :defer)
 
 (use-package markdown-mode
-  :ensure t)
+  :ensure t
+  :defer)
 
 (use-package yaml-mode
-  :ensure t)
+  :ensure t
+  :defer)
 
 (use-package avy
   :ensure t

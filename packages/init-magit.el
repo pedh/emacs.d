@@ -1,4 +1,4 @@
-;;; init-magit --- Initialize magit
+;;; init-magit --- Initialize magit -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 

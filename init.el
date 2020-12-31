@@ -1,4 +1,4 @@
-;;; init --- Initialize
+;;; init --- Initialize -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 

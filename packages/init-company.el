@@ -1,4 +1,4 @@
-;;; init-company --- Initialize company
+;;; init-company --- Initialize company -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 

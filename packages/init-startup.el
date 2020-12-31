@@ -1,4 +1,4 @@
-;;; init-startup --- Initialize startup
+;;; init-startup --- Initialize startup -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 

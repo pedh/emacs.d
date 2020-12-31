@@ -1,4 +1,4 @@
-;;; init-theme --- Initialize theme
+;;; init-theme --- Initialize theme -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
