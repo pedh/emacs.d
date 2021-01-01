@@ -11,24 +11,26 @@
             (unless (server-running-p)
               (server-start))))
 
+(setq package-archives
+      '(("gnu" . "https://elpa.gnu.org/packages/")
+        ("melpa" . "https://melpa.org/packages/")
+        ("melpa-stable" . "https://stable.melpa.org/packages/")
+        ("org" . "https://orgmode.org/elpa/")))
+
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
-
-(custom-set-variables
- '(inhibit-startup-screen t)
- '(package-selected-packages
-   '(use-package)))
-
-(unless package-archive-contents
-  (package-refresh-contents))
-(package-install-selected-packages)
-
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+;;(package-initialize)
 (eval-when-compile
   (require 'use-package))
+(require 'bind-key)
+(setq use-package-verbose t)
+(setq use-package-always-ensure t)
+(setq package-enable-at-startup t)
+(setq inhibit-startup-screen t)
 
 (use-package esup
-  :ensure t
   :pin melpa
   :commands (esup))
 

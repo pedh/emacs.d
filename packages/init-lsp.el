@@ -3,15 +3,14 @@
 ;;; Code:
 
 (use-package lsp-mode
-  :ensure t
   :hook ((python-mode . lsp)
          (go-mode . lsp))
+  :defer t
   :config
   (setq lsp-completion-provider :capf)
   (setq lsp-idle-delay 0.500))
 
 (use-package lsp-ui
-  :ensure t
   :defer t)
 
 (provide 'init-lsp)

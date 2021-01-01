@@ -1,12 +1,13 @@
 *~
 \#*\#
+*.elc
 /elpa
 /auto-save-list
 /anaconda-mode
 /recentf
 /projectile-bookmarks.eld
-/.lsp-session-v1
 /transient
-/.org-id-locations
 /eln-cache
 /tramp
+/.lsp-session-v1
+/.last-package-update-day

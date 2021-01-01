@@ -3,7 +3,7 @@
 ;;; Code:
 
 (use-package geiser
-  :ensure t
+  :defer t
   :config
   (setq geiser-active-implementations '(mit)))
 

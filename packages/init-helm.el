@@ -3,7 +3,6 @@
 ;;; Code:
 
 (use-package helm
-  :ensure t
   :bind (("M-x" . helm-M-x)
          ("C-x r b" . helm-filtered-bookmarks)
          ("C-x C-f" . helm-find-files))
@@ -14,19 +13,17 @@
   (helm-mode 1))
 
 (use-package helm-projectile
-  :ensure t
+  :defer t
   :hook (projectile-mode . helm-projectile-on))
 
 (use-package helm-ag
-  :ensure t
-  :defer)
+  :defer t)
 
 (use-package helm-swoop
   :bind (("M-i" . helm-swoop)
          ("M-I" . helm-swoop-back-to-last-point)
          ("C-c M-i" . helm-multi-swoop)
-         ("C-x M-i" . helm-multi-swoop-all))
-  :ensure t)
+         ("C-x M-i" . helm-multi-swoop-all)))
 
 
 (provide 'init-helm)
