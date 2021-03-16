@@ -3,7 +3,7 @@
 ;;; Code:
 
 (use-package flycheck
-  :init (global-flycheck-mode))
+  :config (global-flycheck-mode))
 
 (use-package exec-path-from-shell
   :if (eq system-type 'darwin)
