@@ -25,6 +25,11 @@
          ("C-c M-i" . helm-multi-swoop)
          ("C-x M-i" . helm-multi-swoop-all)))
 
+(use-package helm-descbinds
+  :after (helm)
+  :config
+  (helm-descbinds-mode))
+
 
 (provide 'init-helm)
 ;;; init-helm.el ends here

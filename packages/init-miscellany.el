@@ -23,7 +23,11 @@
 
 (use-package macrostep
   :bind (:map emacs-lisp-mode-map
-         ("C-c e" . macrostep-expand)))
+              ("C-c e" . macrostep-expand)))
+
+(use-package eldoc
+  :defer t
+  :diminish eldoc-mode)
 
 (use-package projectile
   :bind-keymap ("s-p" . projectile-command-map)
@@ -32,6 +36,7 @@
   (projectile-mode +1))
 
 (use-package yasnippet
+  :diminish yas-minor-mode
   :hook (prog-mode . yas-minor-mode)
   :hook (org-mode . yas-minor-mode))
 
@@ -39,11 +44,13 @@
   :after (yasnippet))
 
 (use-package smartparens
+  :diminish smartparens-mode
   :config
   (require 'smartparens-config)
   (smartparens-global-mode))
 
 (use-package which-key
+  :diminish which-key-mode
   :config
   (which-key-mode))
 
@@ -54,20 +61,11 @@
   (global-anzu-mode +1))
 
 (use-package undo-tree
+  :diminish undo-tree-mode
   :config
   (global-undo-tree-mode))
 
-(use-package rainbow-delimiters
-  :hook (prog-mode . rainbow-delimiters-mode))
-
 (setq-default indent-tabs-mode nil)
-
-(use-package whitespace
-  :hook ((prog-mode org-mode) . whitespace-mode)
-  :hook ((go-mode c-mode-common)
-         . (lambda () (whitespace-mode 0) (setq indent-tabs-mode t)))
-  :config
-  (setq whitespace-style '(face empty tabs lines-tail trailing)))
 
 (use-package neotree
   :bind (([f8] . neotree-toggle)))

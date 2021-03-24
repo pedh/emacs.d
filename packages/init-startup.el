@@ -25,10 +25,13 @@
 (eval-when-compile
   (require 'use-package))
 (require 'bind-key)
+
 (setq use-package-verbose t)
 (setq use-package-always-ensure t)
 (setq package-enable-at-startup t)
 (setq inhibit-startup-screen t)
+
+(use-package diminish)
 
 (use-package esup
   :pin melpa
