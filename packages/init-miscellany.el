@@ -104,6 +104,9 @@
 (use-package ggtags
   :hook (c-mode-common . ggtags-mode))
 
+(use-package call-graph
+  :bind (("C-c g" . call-graph)))
+
 (use-package auto-package-update
   :config
   (setq auto-package-update-delete-old-versions t)
