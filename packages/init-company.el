@@ -14,5 +14,10 @@
          :map company-active-map
          ("C-:" . helm-company)))
 
+(use-package company-quickhelp
+  :after (company)
+  :config
+  (company-quickhelp-mode))
+
 (provide 'init-company)
 ;;; init-company.el ends here

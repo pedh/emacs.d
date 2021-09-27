@@ -1,6 +1,7 @@
 *~
 \#*\#
 *.elc
+*.cache
 /elpa
 /auto-save-list
 /anaconda-mode
@@ -11,3 +12,4 @@
 /tramp
 /.lsp-session-v1
 /.last-package-update-day
+/url

@@ -5,6 +5,10 @@
 (use-package flycheck
   :config (global-flycheck-mode))
 
+(use-package flyspell
+  :hook (prog-mode . flyspell-prog-mode)
+  :hook (text-mode . flyspell-mode))
+
 (use-package exec-path-from-shell
   :if (eq system-type 'darwin)
   :config
@@ -106,6 +110,9 @@
 
 (use-package call-graph
   :bind (("C-c g" . call-graph)))
+
+(use-package osx-dictionary
+  :bind (("C-c d". osx-dictionary-search-word-at-point)))
 
 (use-package auto-package-update
   :config
