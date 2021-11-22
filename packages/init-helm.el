@@ -30,6 +30,10 @@
   :config
   (helm-descbinds-mode))
 
+(use-package helm-file-preview
+  :after (helm)
+  :config
+  (helm-file-preview-mode 1))
 
 (provide 'init-helm)
 ;;; init-helm.el ends here
