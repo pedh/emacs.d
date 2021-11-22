@@ -3,9 +3,8 @@
 ;;; Code:
 
 (use-package org
-  :pin org
-  :ensure org-plus-contrib
   :defer t
+  :ensure org-contrib
   :config
   (setq org-confirm-babel-evaluate nil
         org-directory "~/org"
