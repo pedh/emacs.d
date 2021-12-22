@@ -111,6 +111,14 @@
 (use-package call-graph
   :bind (("C-c g" . call-graph)))
 
+(use-package dumb-jump
+  :defer t
+  :init
+  (setq dumb-jump-selector 'helm)
+  ;; Enable xref-backend of dumb-jump. It's chosen only when no better
+  ;; options is available
+  (add-hook 'xref-backend-functions #'dumb-jump-xref-activate))
+
 (use-package osx-dictionary
   :bind (("C-c d". osx-dictionary-search-word-at-point)))
 
