@@ -122,12 +122,6 @@
 (use-package osx-dictionary
   :bind (("C-c d". osx-dictionary-search-word-at-point)))
 
-(use-package auto-package-update
-  :config
-  (setq auto-package-update-delete-old-versions t)
-  (setq auto-package-update-hide-results t)
-  (auto-package-update-maybe))
-
 (setq default-directory "~/")
 
 (provide 'init-miscellany)
