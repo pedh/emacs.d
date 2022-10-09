@@ -18,9 +18,9 @@
   (if-let (gls (executable-find "gls"))
       (setq insert-directory-program gls)))
 
-(setq python-shell-interpreter "python3")
-
-(setq auth-source-save-behavior nil)
+(custom-set-variables
+ '(python-shell-interpreter "python3")
+ '(auth-source-save-behavior nil))
 
 (use-package expand-region
   :bind ("C-=" . er/expand-region))
@@ -77,13 +77,15 @@
 (use-package recentf
   :config
   (recentf-mode 1)
-  (setq recentf-max-menu-items 25)
-  (setq recentf-max-saved-items 25)
+  (custom-set-variables
+   '(recentf-max-menu-items 25)
+   '(recentf-max-saved-items 25))
   (run-at-time nil (* 5 60) 'recentf-save-list))
 
 (use-package graphviz-dot-mode
   :config
-  (setq graphviz-dot-indent-width 4)
+  (custom-set-variables
+   '(graphviz-dot-indent-width 4))
   (require 'company-graphviz-dot))
 
 (use-package goto-chg

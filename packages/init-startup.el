@@ -25,12 +25,12 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 (straight-use-package 'use-package)
-(setq package-enable-at-startup nil)
-(setq straight-use-package-by-default t)
-
-(setq use-package-verbose t)
-(setq use-package-always-ensure t)
-(setq inhibit-startup-screen t)
+(custom-set-variables
+ '(package-enable-at-startup nil)
+ '(straight-use-package-by-default t)
+ '(use-package-verbose t)
+ '(use-package-always-ensure t)
+ '(inhibit-startup-screen t))
 
 (use-package diminish)
 

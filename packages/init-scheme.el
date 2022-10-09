@@ -5,7 +5,8 @@
 (use-package geiser
   :defer t
   :config
-  (setq geiser-active-implementations '(mit)))
+  (custom-set-variables
+   '(geiser-active-implementations '(mit))))
 
 (provide 'init-scheme)
 ;;; init-scheme.el ends here

@@ -7,7 +7,8 @@
          ("C-x M-g" . magit-dispatch))
   :defer 2
   :config
-  (setq git-commit-summary-max-length 49))
+  (custom-set-variables
+   '(git-commit-summary-max-length 49)))
 
 (provide 'init-magit)
 ;;; init-magit.el ends here

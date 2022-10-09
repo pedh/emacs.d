@@ -6,9 +6,13 @@
   :defer t
   :ensure org-contrib
   :config
-  (setq org-confirm-babel-evaluate nil
-        org-directory "~/org"
-        org-mobile-directory
+  (custom-set-variables
+   '(org-confirm-babel-evaluate nil)
+   '(org-directory "~/org")
+   '(org-babel-latex-preamble
+     (lambda (_)
+       "\\documentclass[preview]{standalone}")))
+  (setq org-mobile-directory
         "~/Library/Mobile Documents/iCloud~com~mobileorg~mobileorg/Documents")
   (org-babel-do-load-languages
    'org-babel-load-languages
@@ -17,7 +21,8 @@
      (lisp . t)
      (emacs-lisp . t)
      (python . t)
-     (R . t))))
+     (R . t)
+     (latex . t))))
 
 (provide 'init-org)
 ;;; init-org.el ends here
