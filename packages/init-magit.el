@@ -10,5 +10,7 @@
   (custom-set-variables
    '(git-commit-summary-max-length 49)))
 
+(use-package git-modes)
+
 (provide 'init-magit)
 ;;; init-magit.el ends here
