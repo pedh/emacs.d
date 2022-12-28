@@ -9,7 +9,6 @@
   :bind-keymap ("C-x c" . helm-command-prefix)
   :defer 2
   :config
-  (require 'helm-config)
   (helm-mode 1))
 
 (use-package helm-projectile
