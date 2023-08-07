@@ -1,0 +1,9 @@
+* Overview
+  My Emacs config repo
+* Installation
+  1. Install [[https://github.com/doomemacs/doomemacs][Doom Emacs]]
+  2. Remove and backup ~/.config/doom directory
+  3. Clone this repo
+     #+BEGIN_SRC
+     $ git clone <This repo> ~/.config/doom
+     #+END_SRC
