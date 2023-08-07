@@ -1,0 +1,2 @@
+* Overview
+  Deprecated, moved to [[https://github.com/pedh/dotfiles][pedh/dotfiles]].
